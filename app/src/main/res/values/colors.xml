@@ -16,4 +16,6 @@
     <color name="match_background">#272639</color>
     <color name="match_versus">#80FFFFFF</color>
     <color name="match_divider">#33FFFFFF</color>
+    
+    <color name="player_name">#6C6B7E</color>
 </resources>
