@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#161621</color>
+
+    <color name="status_live">#F42A35</color>
+    <color name="status_not_started">#33FAFAFA</color>
+
+    <color name="match_background">#272639</color>
+    <color name="match_versus">#80FFFFFF</color>
+    <color name="match_divider">#33FFFFFF</color>
 </resources>

@@ -6,7 +6,8 @@
         </shape>
     </item>
     <item>
-        <bitmap android:gravity="center"
+        <bitmap
+            android:gravity="center"
             android:src="@drawable/img_fuze_logo" />
     </item>
 </layer-list>
