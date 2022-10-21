@@ -2,10 +2,7 @@ package com.github.abraga.fuzetest.data.api
 
 import com.github.abraga.fuzetest.data.models.MatchResponse
 import com.github.abraga.fuzetest.data.models.PlayerResponse
-import com.github.abraga.fuzetest.data.models.ResponseState
-import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MatchesApi {

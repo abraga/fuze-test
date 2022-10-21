@@ -4,10 +4,6 @@ data class ResponseState<out T>(val status: State, val data: T?, val message: St
 
     companion object {
         fun <T> success(data: T?) =  ResponseState(State.SUCCESS, data, null)
-
-        fun <T> error(msg: String) = ResponseState(State.ERROR, null, msg)
-
-        fun <T> loading() = ResponseState(State.LOADING, null, null)
     }
 }
 
