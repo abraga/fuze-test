@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/xlarge"
+    android:layout_marginHorizontal="@dimen/xlarge"
+    android:background="@drawable/drawable_match">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMatchStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/smaller"
+        tools:background="@drawable/drawable_status_live">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMatchStatusTime"
+            style="@style/TextViewDefaultTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.github.abraga.fuzetest.presentation.components.MatchVersusView
+        android:id="@+id/mvMatchVersus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large"
+        app:layout_constraintTop_toBottomOf="@id/clMatchStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/mdMatchDivider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large"
+        app:layout_constraintTop_toBottomOf="@id/mvMatchVersus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/match_divider" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mdMatchDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMatchLeagueLogo"
+            android:layout_width="@dimen/medium"
+            android:layout_height="@dimen/medium"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginVertical="@dimen/smaller"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewDefaultTheme"
+            android:id="@+id/tvMatchLeagueName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/smaller"
+            app:layout_constraintTop_toTopOf="@id/ivMatchLeagueLogo"
+            app:layout_constraintBottom_toBottomOf="@id/ivMatchLeagueLogo"
+            app:layout_constraintStart_toEndOf="@id/ivMatchLeagueLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:maxLines="1"
+            tools:text="@tools:sample/lorem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

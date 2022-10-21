@@ -18,4 +18,14 @@
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:statusBarColor">@color/background</item>
     </style>
+
+    <style name="MainTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/background</item>
+    </style>
+
+    <style name="TextViewDefaultTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_smaller</item>
+    </style>
 </resources>

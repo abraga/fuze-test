@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMatchTeamHomeLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="@dimen/larger"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvMatchVersus"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewDefaultTheme"
+        android:id="@+id/tvMatchTeamHomeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smaller"
+        app:layout_constraintTop_toBottomOf="@id/ivMatchTeamHomeLogo"
+        app:layout_constraintStart_toStartOf="@id/ivMatchTeamHomeLogo"
+        app:layout_constraintEnd_toEndOf="@id/ivMatchTeamHomeLogo"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:maxLength="14"
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewDefaultTheme"
+        android:id="@+id/tvMatchVersus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/match_versus"
+        android:text="@string/match_versus" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMatchTeamAwayLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/larger"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvMatchVersus"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewDefaultTheme"
+        android:id="@+id/tvMatchTeamAwayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smaller"
+        app:layout_constraintTop_toBottomOf="@id/ivMatchTeamAwayLogo"
+        app:layout_constraintStart_toStartOf="@id/ivMatchTeamAwayLogo"
+        app:layout_constraintEnd_toEndOf="@id/ivMatchTeamAwayLogo"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:maxLength="14"
+        tools:text="@tools:sample/lorem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

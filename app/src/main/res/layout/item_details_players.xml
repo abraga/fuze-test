@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHomePlayerContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clAwayPlayerContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="@dimen/xsmall"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/drawable_home_player" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHomePlayerPhoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/clHomePlayerContainer"
+            android:adjustViewBounds="true"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomePlayerNick"
+            style="@style/TextViewDefaultTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvHomePlayerName"
+            app:layout_constraintEnd_toStartOf="@id/ivHomePlayerPhoto"
+            app:layout_constraintHorizontal_bias="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="@tools:sample/lorem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomePlayerName"
+            style="@style/TextViewDefaultTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivHomePlayerPhoto"
+            app:layout_constraintEnd_toStartOf="@id/ivHomePlayerPhoto"
+            app:layout_constraintHorizontal_bias="1"
+            android:ellipsize="end"
+            android:textColor="@color/player_name"
+            android:maxLines="1"
+            tools:text="@tools:sample/lorem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAwayPlayerContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clHomePlayerContainer"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="@dimen/xsmall"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/drawable_away_player" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAwayPlayerPhoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/clAwayPlayerContainer"
+            android:adjustViewBounds="true"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAwayPlayerNick"
+            style="@style/TextViewDefaultTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvAwayPlayerName"
+            app:layout_constraintStart_toEndOf="@id/ivAwayPlayerPhoto"
+            app:layout_constraintHorizontal_bias="0"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="@tools:sample/lorem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAwayPlayerName"
+            style="@style/TextViewDefaultTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium"
+            app:layout_constraintBottom_toBottomOf="@id/ivAwayPlayerPhoto"
+            app:layout_constraintStart_toEndOf="@id/ivAwayPlayerPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:textColor="@color/player_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="@tools:sample/lorem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
