@@ -1,4 +1,4 @@
-package com.github.abraga.fuzetest
+package com.github.abraga.fuzetest.presentation.components
 
 import android.content.Context
 import android.util.AttributeSet
@@ -19,12 +19,12 @@ class MatchVersusView @JvmOverloads constructor(
         true
     )
 
-    fun setHomeTeam(name: String, logoUrl: String) = with(binding) {
+    fun setHomeTeam(name: String?, logoUrl: String?) = with(binding) {
         tvMatchTeamHomeName.text = name
         ivMatchTeamHomeLogo.loadUrl(logoUrl)
     }
 
-    fun setAwayTeam(name: String, logoUrl: String) = with(binding) {
+    fun setAwayTeam(name: String?, logoUrl: String?) = with(binding) {
         tvMatchTeamAwayName.text = name
         ivMatchTeamAwayLogo.loadUrl(logoUrl)
     }

@@ -1,14 +1,11 @@
 package com.github.abraga.fuzetest.presentation.main.adapter
 
 import androidx.recyclerview.widget.DiffUtil
+import com.github.abraga.fuzetest.data.models.MatchResponse
 
-class MatchesDiff : DiffUtil.ItemCallback<String>() {
+object MatchesDiff : DiffUtil.ItemCallback<MatchResponse>() {
 
-    override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun areItemsTheSame(oldItem: MatchResponse, newItem: MatchResponse) = oldItem.id == newItem.id
 
-    override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun areContentsTheSame(oldItem: MatchResponse, newItem: MatchResponse) = oldItem == newItem
 }

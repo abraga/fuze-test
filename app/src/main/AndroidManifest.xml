@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".FuzeTestApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -26,10 +29,12 @@
         <activity
             android:name=".presentation.main.MainActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/MainTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".presentation.details.DetailsActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/MainTheme"
             tools:ignore="LockedOrientationActivity" />
     </application>
 

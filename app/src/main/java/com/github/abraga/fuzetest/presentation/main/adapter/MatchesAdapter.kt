@@ -1,15 +1,18 @@
 package com.github.abraga.fuzetest.presentation.main.adapter
 
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
+import androidx.paging.PagingDataAdapter
+import com.github.abraga.fuzetest.data.models.MatchResponse
 
-class MatchesAdapter : ListAdapter<String, MatchesViewHolder>(MatchesDiff()) {
+class MatchesAdapter(
+    private val onItemClicked: (MatchResponse) -> Unit
+) : PagingDataAdapter<MatchResponse, MatchesViewHolder>(MatchesDiff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatchesViewHolder {
-        TODO("Not yet implemented")
+        return MatchesViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: MatchesViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        getItem(position)?.let { holder.onBind(it, onItemClicked) }
     }
 }

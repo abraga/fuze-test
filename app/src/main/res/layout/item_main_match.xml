@@ -19,6 +19,7 @@
         tools:background="@drawable/drawable_status_live">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMatchStatusTime"
             style="@style/TextViewDefaultTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.github.abraga.fuzetest.MatchVersusView
+    <com.github.abraga.fuzetest.presentation.components.MatchVersusView
         android:id="@+id/mvMatchVersus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

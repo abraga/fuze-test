@@ -9,5 +9,6 @@
     <dimen name="xlarge">24dp</dimen>
 
     <dimen name="text_smaller">12sp</dimen>
+    <dimen name="text_medium">20sp</dimen>
     <dimen name="text_larger">32sp</dimen>
 </resources>

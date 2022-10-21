@@ -20,7 +20,7 @@
         app:titleCentered="true"
         tools:title="@tools:sample/lorem" />
 
-    <com.github.abraga.fuzetest.MatchVersusView
+    <com.github.abraga.fuzetest.presentation.components.MatchVersusView
         android:id="@+id/mvMatchVersus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,18 +40,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="@tools:sample/lorem" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPlayersList"
+    <ViewFlipper
+        android:id="@+id/vfFlipper"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/smaller"
         app:layout_constraintTop_toBottomOf="@id/tvMatchTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="visible"
-        tools:listitem="@layout/item_details_players"
-        tools:itemCount="5"
-        tools:visibility="visible" />
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlayersList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/smaller"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_details_players"
+            tools:itemCount="5" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center" />
+
+        <include
+            android:id="@+id/warning"
+            layout="@layout/reusable_error_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/large"/>
+
+    </ViewFlipper>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

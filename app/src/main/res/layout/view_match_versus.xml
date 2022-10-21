@@ -24,6 +24,7 @@
         app:layout_constraintTop_toBottomOf="@id/ivMatchTeamHomeLogo"
         app:layout_constraintStart_toStartOf="@id/ivMatchTeamHomeLogo"
         app:layout_constraintEnd_toEndOf="@id/ivMatchTeamHomeLogo"
+        android:gravity="center_horizontal"
         android:maxLines="1"
         android:maxLength="14"
         tools:text="@tools:sample/lorem" />
@@ -58,6 +59,7 @@
         app:layout_constraintTop_toBottomOf="@id/ivMatchTeamAwayLogo"
         app:layout_constraintStart_toStartOf="@id/ivMatchTeamAwayLogo"
         app:layout_constraintEnd_toEndOf="@id/ivMatchTeamAwayLogo"
+        android:gravity="center_horizontal"
         android:maxLines="1"
         android:maxLength="14"
         tools:text="@tools:sample/lorem" />

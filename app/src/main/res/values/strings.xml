@@ -2,4 +2,10 @@
     <string name="app_name">Fuze Test</string>
     <string name="main_title">Partidas</string>
     <string name="match_versus">VS</string>
+    <string name="match_live">AGORA</string>
+    <string name="match_ended">Encerrado</string>
+    <string name="match_league">%s (%s)</string>
+    <string name="match_today">Hoje, %s</string>
+    <string name="warning_title">Ops! Nosso sistema está passando por ajustes.\n\nTente novamente, por favor.</string>
+    <string name="warning_button">Tentar novamente</string>
 </resources>
